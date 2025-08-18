@@ -819,7 +819,7 @@ h4 {
 .slide-desc p {
     font-size: 1.4em;
     text-align: left;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .slide-desc p:not(:first-child) {
