@@ -1167,6 +1167,7 @@ img.footer-logo-img {
 .footer-widget li div ul.menu li a {
     color: var(--black);
     transition: all .5s linear;
+    font-size: 16px;
 }
 
 .footer-widget li div ul.menu li a:hover {
