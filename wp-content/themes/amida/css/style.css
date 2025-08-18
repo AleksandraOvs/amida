@@ -469,14 +469,14 @@ a:active {
 
 a.btn {
     display: block;
-    font-weight: 500;
+    font-weight: 300;
     background: var(--accent);
     text-decoration: none;
     color: #fff;
     padding: 10px 30px;
     text-align: center;
     text-transform: uppercase;
-    border-radius: 4px;
+    border-radius: 25px;
     width: max-content;
     transition: all .5s ease-in-out;
     position: relative;
@@ -1543,14 +1543,14 @@ h3.post-title {
 
 a.wp-block-latest-posts__read-more {
     display: block;
-    font-weight: 500;
+    font-weight: 300;
     background: var(--accent);
     text-decoration: none;
     color: #fff;
     padding: 10px 30px;
     text-align: center;
     text-transform: uppercase;
-    border-radius: 4px;
+    border-radius:25px;
     margin-top: 20px;
     width: max-content;
     transition: all .5s ease-in-out;
