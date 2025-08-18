@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             window.addEventListener('scroll', () => {
-                if (-mainBlock.getBoundingClientRect().top > 100) {
+                if (-mainBlock.getBoundingClientRect().top > 500) {
                     headerFront.classList.add('header-scroll');
 
                 } else {
