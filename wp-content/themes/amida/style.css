@@ -460,6 +460,7 @@ a.menu-toggle.open .bar:nth-child(3) {
 
 	.header-nav ul li a {
 		text-transform: uppercase;
+		color: var(--black);
 	}
 
 	ul.menu li a::after {
