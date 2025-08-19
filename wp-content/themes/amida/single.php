@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
@@ -28,7 +29,8 @@ get_header();
 
                 <!-- <div class="fixed-container">
                     <ul class="breadcrumbs__list">
-                        <?php //echo site_breadcrumbs(); ?>
+                        <?php //echo site_breadcrumbs(); 
+                        ?>
                     </ul>
                 </div> -->
             </header><!-- .page-header -->
@@ -36,15 +38,17 @@ get_header();
         </div>
 
         <div class="page-section__content">
-            <?php
-            while (have_posts()) :
-                the_post();
+            <div class="fixed-container">
+                <?php
+                while (have_posts()) :
+                    the_post();
 
-                //get_template_part('template-parts/content', get_post_type());
-				the_content();
+                    //get_template_part('template-parts/content', get_post_type());
+                    the_content();
 
-            endwhile; // End of the loop.
-            ?>
+                endwhile; // End of the loop.
+                ?>
+            </div>
         </div>
     </section>
 
@@ -63,25 +67,25 @@ get_header();
 
         if ($related->have_posts()) :
     ?>
-        <section class="page-section related-posts">
-            <div class="fixed-container">
-                <h2 class="related-posts__title">Читайте также</h2>
-                <div class="related-posts__list">
-                    <?php while ($related->have_posts()) : $related->the_post(); ?>
-                        <article class="related-post">
-                            <a class="post-thumb" href="<?php the_permalink(); ?>">
-                                <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail('full');
-                                } ?>
-                                <h3 class="related-post__title"><?php the_title(); ?></h3>
-                            </a>
+            <section class="page-section related-posts">
+                <div class="fixed-container">
+                    <h2 class="related-posts__title">Читайте также</h2>
+                    <div class="related-posts__list">
+                        <?php while ($related->have_posts()) : $related->the_post(); ?>
+                            <article class="related-post">
+                                <a class="post-thumb" href="<?php the_permalink(); ?>">
+                                    <?php if (has_post_thumbnail()) {
+                                        the_post_thumbnail('full');
+                                    } ?>
+                                    <h3 class="related-post__title"><?php the_title(); ?></h3>
+                                </a>
 
-							<a href="<?php the_permalink() ?>" class="btn">Читать полностью</a>
-                        </article>
-                    <?php endwhile; ?>
+                                <a href="<?php the_permalink() ?>" class="btn">Читать полностью</a>
+                            </article>
+                        <?php endwhile; ?>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
     <?php
         endif;
         wp_reset_postdata();
