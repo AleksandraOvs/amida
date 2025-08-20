@@ -34,14 +34,17 @@ $excerpt = has_excerpt() ? get_the_excerpt() : wp_trim_words(wp_strip_all_tags(g
         $link_text   = carbon_get_post_meta(get_the_ID(), 'crb_news_link_text');
         ?>
 
-        <?php if ($link){ ?>
-            
-                <a class="btn" href="<?php echo $link ?>">
-                    <?php echo $link_text ?>
-                </a>
-    
-        <?php }else {
-            echo '<a href="'.the_permalink().'" class="btn">Читать</a>';
+        <?php if ($link) { ?>
+
+            <a class="btn" href="<?php echo $link ?>">
+                <?php echo $link_text ?>
+            </a>
+
+        <?php } else {
+        ?>
+            <a href="<?php the_permalink() ?>" class="btn">Читать</a>
+        <?php
+
         } ?>
 
     </div>
