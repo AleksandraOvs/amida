@@ -65,7 +65,7 @@ function site_carbon()
         ));
 
     Container::make('post_meta', 'Настройки проекта')
-         ->where('post_term', '=', [
+        ->where('post_term', '=', [
             'field'    => 'slug',      // сравниваем по слагу термина
             'value'    => 'projects',  // ваш slug категории
             'taxonomy' => 'category',  // таксономия
@@ -81,6 +81,23 @@ function site_carbon()
             Field::make('text', 'crb_project_link_text', 'Текст ссылки')
                 ->set_default_value('Открыть проект')
                 ->set_help_text('Текст кнопки/ссылки в выводе'),
-            
+
+        ]);
+
+    Container::make('post_meta', 'Доп. поля для новости')
+        ->where('post_term', '=', [
+            'field'    => 'slug',      // сравниваем по слагу термина
+            'value'    => 'news',  // ваш slug категории
+            'taxonomy' => 'category',  // таксономия
+        ])
+        ->add_fields([
+            Field::make('text', 'crb_news_link', 'Ссылка')
+                ->set_help_text('Укажите URL для переходна страницу')
+                ->set_width(50),
+
+            Field::make('text', 'crb_news_link_text', 'Текст ссылки')
+                ->set_width(50)
+                ->set_help_text('Текст кнопки/ссылки в выводе'),
+
         ]);
 }

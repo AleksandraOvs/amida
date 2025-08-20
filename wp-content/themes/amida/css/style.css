@@ -672,7 +672,7 @@ h4 {
 .page-content .wp-block-columns .wp-block-column.fixed-container {
     width: 1400px;
     margin: 0 auto !important;
-    padding: 0 30px;
+    /* padding: 0 30px; */
     flex-grow: unset;
     display: block;
     flex-basis: unset;
@@ -1485,6 +1485,10 @@ h3.post-title {
 
 /*NEWS*/
 
+.news-section .fixed-container h2 {
+  margin-bottom: 40px;
+}
+
 .wp-block-latest-posts__list.is-grid {
     gap: 30px;
 }
@@ -1567,6 +1571,14 @@ a.wp-block-latest-posts__read-more:hover {
 }
 
 /*PROJECTS*/
+
+.projects-list {
+  padding-top: 0;
+}
+
+.news-section {
+  padding-top: 40px;
+}
 
 .projects-grid {
     margin-top: 40px;
