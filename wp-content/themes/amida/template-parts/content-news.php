@@ -36,7 +36,7 @@ $excerpt = has_excerpt() ? get_the_excerpt() : wp_trim_words(wp_strip_all_tags(g
 
         <?php if ($link) { ?>
 
-            <a class="btn" href="<?php echo $link ?>">
+            <a class="btn" target="_blank" href="<?php echo $link ?>">
                 <?php echo $link_text ?>
             </a>
 
