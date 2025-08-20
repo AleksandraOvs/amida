@@ -16,7 +16,7 @@ $title = get_the_title();
 $excerpt = has_excerpt() ? get_the_excerpt() : wp_trim_words(wp_strip_all_tags(get_the_content(null, false, $post_id)), 20, '…');
 ?>
 
-<article class="post">
+<article class="post fromBottom">
     <?php if ($thumb_url): ?>
         <a href="<?php the_permalink() ?>" class="post-thumb-wrapper">
             <img class="project-thumb" src="<?php echo esc_url($thumb_url); ?>" alt="<?php echo esc_attr($title); ?>">

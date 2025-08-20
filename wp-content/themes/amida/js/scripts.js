@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     let options = { threshold: [0.5] };
     let observer = new IntersectionObserver(onEntry, options);
-    let elements = document.querySelectorAll('.fromTop, .toRight, .toleft, .fromBottom, .fromOpacity');
+    let elements = document.querySelectorAll('.fromTop, .toRight, .toLeft, .fromBottom, .fromOpacity');
     for (let elm of elements) {
         observer.observe(elm);
     };
