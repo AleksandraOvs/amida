@@ -9,7 +9,6 @@ $args = [
     'ignore_sticky_posts' => true,
     'category_name'  => 'projects',
 ];
-
 $query = new WP_Query($args);
 ?>
 
