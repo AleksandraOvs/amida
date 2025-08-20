@@ -527,8 +527,16 @@ body.home #page header .fixed-container .header-right .menu-toggle .bar {
   background: #fff;
 }
 
+body.home #page header .fixed-container .header-right .menu-toggle.open .bar {
+  background: var(--black);
+}
+
 body.home #page header.header-scroll .fixed-container .header-right .menu-toggle .bar {
   background: var(--black);
+}
+
+body.home #page header.header-scroll .fixed-container .header-right .menu-toggle.open .bar{
+	background: var(--black);
 }
 
 
