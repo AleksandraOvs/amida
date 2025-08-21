@@ -65,3 +65,25 @@
     opacity: 1;
     transition: opacity .5s ease-in-out;
 }
+
+/* задержка появления для последовательных элементов */
+.fromBottom.animate:nth-child(1),
+.toRight.animate:nth-child(1),
+.fromOpacity.animate:nth-child(1),
+.toLeft.animate:nth-child(1) {
+    transition-delay: 0s;
+}
+.fromBottom.animate:nth-child(2),
+.toRight.animate:nth-child(2),
+.fromOpacity.animate:nth-child(2),
+.toLeft.animate:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.fromBottom.animate:nth-child(3),
+.toRight.animate:nth-child(3),
+.fromOpacity.animate:nth-child(3),
+.toLeft.animate:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+
