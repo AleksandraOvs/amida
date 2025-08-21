@@ -25,7 +25,7 @@ $query = new WP_Query($args);
                     $link = carbon_get_post_meta($post_id, 'crb_project_link');
                     $link_text = carbon_get_post_meta($post_id, 'crb_project_link_text');
                 ?>
-                    <article class="project-card">
+                    <article class="project-card fromOpacity">
                         <?php if ($thumb_url): ?>
                             <a href="<?php the_permalink() ?>" class="project-thumb-wrapper">
                                 <img class="project-thumb" src="<?php echo esc_url($thumb_url); ?>" alt="<?php echo esc_attr($title); ?>">
